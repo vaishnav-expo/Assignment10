@@ -1,0 +1,74 @@
+<!--References
+http://bl.ocks.org/jadiehm/af4a00140c213dfbc4e6
+Dataset : https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-total.html#par_textimage_70769902
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Births by County - Choropleth</title>
+    <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/queue.v1.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/topojson.v1.min.js"></script>
+</head>
+
+<!-- CSS -->
+<style>
+
+    path {
+        stroke:white;
+        stroke-width: 1px;
+    }
+
+    body {
+        font-family: 'Proxima Nova', sans-serif;
+    }
+
+    .county {
+        font: 14px sans-serif;
+        font-weight: bold;
+    }
+
+    .legend {
+        font-size: 14px;
+        font-family: 'Proxima Nova', sans-serif;
+    }
+
+    .legend_title {
+        font-size: 14px;
+        font-family: 'Proxima Nova', sans-serif;
+        font-weight: bold;
+    }
+
+    div.tooltip {
+        position: absolute;
+        left: 75px;
+        text-align: center;
+        height: 16px;
+        padding: 10px;
+        font-size: 14px;
+        background: #FFFFFF;
+        border: 1px solid #989898;
+        pointer-events: none;
+    }
+
+    p {
+        font-family: 'Proxima Nova', sans-serif;
+        font-size:10px;
+        margin: 20px 0 0 10px;
+    }
+
+    @media (max-width: 400px) {
+        .d3map {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+<h1>Births in the USA in 2019 per county</h1>
+<script src="Choropleth.js"></script>
+<p>Source: U.S. Census</p>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!--References
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Births by State - SymbolMap</title>
+    <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/queue.v1.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/topojson.v1.min.js"></script>
+</head>
+
+<!-- CSS -->
+<style>
+
+    .states {
+        fill: #ccc;
+        stroke: #fff;
+    }
+
+    .symbol {
+        fill: steelblue;
+        fill-opacity: .8;
+        stroke: #fff;
+    }
+
+    div.tooltip {
+        position: absolute;
+        left: 75px;
+        text-align: center;
+        height: 16px;
+        padding: 10px;
+        font-size: 14px;
+        background: #FFFFFF;
+        border: 1px solid #989898;
+        pointer-events: none;
+    }
+
+</style>
+
+<body>
+<h1>Births in the USA in 2019 per state</h1>
+<script src="SymbolMap.js"></script>
+<p>Source: U.S. Census</p>
+</body>
+
+</html>
