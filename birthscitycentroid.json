@@ -1,0 +1,8 @@
+{"type":"FeatureCollection","features":[
+  {"type":"Feature","id":"01","geometry":{"type":"Point","coordinates":[-86.766233,33.001471]},"properties":{"name":"Jefferson County","births":8422}},
+  {"type":"Feature","id":"02","geometry":{"type":"Point","coordinates":[-148.716968,61.288254]},"properties":{"name":"Anchorage Municipality","births":3923}},
+  {"type":"Feature","id":"04","geometry":{"type":"Point","coordinates":[-111.828711,33.373506]},"properties":{"name":"Maricopa County","births":52722}},
+  {"type":"Feature","id":"05","geometry":{"type":"Point","coordinates":[-92.576816,35.080251]},"properties":{"name":"Pulaski County","births":5067}},
+  {"type":"Feature","id":"06","geometry":{"type":"Point","coordinates":[-119.355165,35.458606]},"properties":{"name":"Los Angeles","births":112963}},
+  {"type":"Feature","id":"08","geometry":{"type":"Point","coordinates":[-105.203628,39.500656]},"properties":{"name":"El Paso County","births":9512}}
+]}

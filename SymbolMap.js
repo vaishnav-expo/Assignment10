@@ -2,7 +2,7 @@ var width = 960,
     height = 500;
 
 var radius = d3.scale.sqrt()
-    .domain([0, 35000])
+    .domain([0, 10000])
     .range([0, 10]);
 
 var path = d3.geo.path();
@@ -17,10 +17,11 @@ var div = d3.select("body").append("div")
 
 queue()
     .defer(d3.json, "us.json")
-    .defer(d3.json, "populationcentroid.json")
+    .defer(d3.json, "birthscitycentroid.json")
+    .defer(d3.csv, "population.csv")
     .await(ready);
 
-function ready(error, us, centroid) {
+function ready(error, us, centroid, data) {
     if (error) throw error;
 
     //Moves selction to front
@@ -42,9 +43,24 @@ function ready(error, us, centroid) {
 
     svg.append("path")
         .attr("class", "states")
-        .datum(topojson.feature(us, us.objects.states))
+        .datum(topojson.feature(us, us.objects.counties))
         .attr("d", path);
 
+
+    var sortData = [];
+
+    data.forEach((i,k) => {
+        sortData[k] = +i["BIRTHS2019"];
+    })
+
+    sortData.sort(function(a, b) { return b-a; });
+
+
+    var toppops = [];
+
+    for(let i=0;i<6;i++){
+        toppops[i] = sortData[i];
+    }
 
     svg.selectAll(".symbol")
         .data(centroid.features.sort(function(a, b) { return b.properties.births - a.properties.births; }))
